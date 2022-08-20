@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace DependabotTestWebApplication.Data
+namespace WebApplicationDevOps.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {

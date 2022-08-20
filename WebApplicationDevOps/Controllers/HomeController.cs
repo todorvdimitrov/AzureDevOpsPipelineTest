@@ -1,6 +1,6 @@
-﻿namespace DependabotTestWebApplication.Controllers
+﻿namespace WebApplicationDevOps.Controllers
 {
-    using DependabotTestWebApplication.Models;
+    using WebApplicationDevOps.Models;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Logging;
     using System.Diagnostics;

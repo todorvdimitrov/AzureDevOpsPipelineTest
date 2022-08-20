@@ -1,6 +1,6 @@
-namespace DependabotTestWebApplication
+namespace WebApplicationDevOps
 {
-    using DependabotTestWebApplication.Data;
+    using WebApplicationDevOps.Data;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.EntityFrameworkCore;

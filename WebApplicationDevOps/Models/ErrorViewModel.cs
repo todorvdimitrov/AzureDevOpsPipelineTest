@@ -1,4 +1,4 @@
-namespace DependabotTestWebApplication.Models
+namespace WebApplicationDevOps.Models
 {
     public class ErrorViewModel
     {

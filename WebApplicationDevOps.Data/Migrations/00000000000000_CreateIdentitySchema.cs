@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Migrations;
 using System;
 
-namespace DependabotTestWebApplication.Data.Migrations
+namespace WebApplicationDevOps.Data.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {
