@@ -38,8 +38,7 @@ steps:
     configuration: '$(buildConfiguration)'
 
 - task: NuGetCommand@2
-  displayName: Create Data layer nuget package
-  condition: and(succeeded(), eq(variables.doRelease, true))
+  displayName: Test nuget package
   inputs:
     command: "pack"
     packagesToPack: "Fourth.Platform.CUP.Data/Fourth.Platform.CUP.Data.csproj"
