@@ -52,4 +52,4 @@ steps:
     command: "push"
     packagesToPush: "$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg"
     nuGetFeedType: "internal"
-    publishVstsFeed: 'TodorDimitrov0691/test-feed'
+    publishVstsFeed: 'PipelineTests/test-feed'
