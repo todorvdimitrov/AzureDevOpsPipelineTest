@@ -41,7 +41,15 @@ steps:
   displayName: Test nuget package
   inputs:
     command: "pack"
-    packagesToPack: "Fourth.Platform.CUP.Data/Fourth.Platform.CUP.Data.csproj"
+    packagesToPack: "WebApplicationDevOps.Data/WebApplicationDevOps.Data.csproj"
     versioningScheme: "byEnvVar"
     versionEnvVar: version
     includeReferencedProjects: true
+
+- task: NuGetCommand@2
+  displayName: Push Test nuget package
+  inputs:
+    command: "push"
+    packagesToPush: "$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg"
+    nuGetFeedType: "internal"
+    publishVstsFeed: 'TodorDimitrov0691/test-feed'
