@@ -13,6 +13,10 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+  major: 1
+  minor: 1
+  build: $[counter(variables['major'], 1)]
+  version: $(major).$(minor).$(build)
 
 steps:
 - task: NuGetToolInstaller@1
@@ -32,3 +36,13 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
+- task: NuGetCommand@2
+  displayName: Create Data layer nuget package
+  condition: and(succeeded(), eq(variables.doRelease, true))
+  inputs:
+    command: "pack"
+    packagesToPack: "Fourth.Platform.CUP.Data/Fourth.Platform.CUP.Data.csproj"
+    versioningScheme: "byEnvVar"
+    versionEnvVar: version
+    includeReferencedProjects: true
