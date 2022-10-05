@@ -53,3 +53,4 @@ steps:
     packagesToPush: "$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg"
     nuGetFeedType: "internal"
     publishVstsFeed: 'PipelineTests/test-feed'
+    nugetConfigPath: "./NuGet.Config"
